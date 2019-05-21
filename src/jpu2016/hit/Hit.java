@@ -1,15 +1,22 @@
 package jpu2016.hit;
 
 public class Hit {
-	private final int			strength;
-	private final int			range;
-	private final TypeHit	typeHit;
+	private final int strength;
+	private final int range;
+	private final TypeHit typeHit;
 
-	public Hit(final int strength, final int range, final TypeHit typeHit) {
-		this.strength = strength;
-		this.range = range;
-		this.typeHit = typeHit;
-	}
+	 public Hit(final int strength, final int range, final TypeHit typeHit) throws Exception { 
+		  if ((strength < 0) || (strength > 100)) { 
+		   throw new Exception("Strength out of range"); 
+		  } 
+		  this.strength = strength; 
+		 
+		  if ((range < 0) || (range > 10)) { 
+		   throw new Exception("Range out of range"); 
+		  } 
+		  this.range = range; 
+		  this.typeHit = typeHit; 
+		 } 
 
 	public int getStrength() {
 		return this.strength;
@@ -22,4 +29,5 @@ public class Hit {
 	public TypeHit getTypeHit() {
 		return this.typeHit;
 	}
+	
 }
