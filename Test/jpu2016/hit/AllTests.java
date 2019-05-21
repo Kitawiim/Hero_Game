@@ -1,13 +1,11 @@
-package jpu2016.craft;
+package jpu2016.hit;
 
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
 @RunWith(Suite.class)
-@SuiteClasses({ AllTests.class, ArcherTest.class, AssassinTest.class, CraftTest.class, WarriorTest.class,
-		WizardTest.class })
-
+@SuiteClasses({ HitTest.class })
 public class AllTests {
 
 }
